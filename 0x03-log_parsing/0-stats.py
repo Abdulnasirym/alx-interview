@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """A python module"""
 
 import sys
@@ -6,7 +6,8 @@ import signal
 import re
 
 
-pattern = re.compile(r'^(\d{1,3}\.){3}\d{1,3} - \[.*?\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+|-)$')
+pattern = re.compile(r'^(\d{1,3}\.){3}\d{1,3} - \[.*?\] \
+                    "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+|-)$')
 status_code_counts = {}
 valid_status_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
 total_file_size = 0
