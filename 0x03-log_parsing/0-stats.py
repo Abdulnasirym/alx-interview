@@ -27,7 +27,7 @@ def print_statistics():
 def handler(signal, frame):
     """Handles the keyboard interrupt to print statistics"""
     print_statistics()
-    sys.exist(0)
+    sys.exit(0)
 
 
 signal.signal(signal.SIGINT, handler)
@@ -51,6 +51,9 @@ try:
         line_count += 1
         if line_count % 10 == 0:
             print_statistics()
+except KeyboardInterrupt:
+    print_statistics()
+    sys.exit(0)
 except Exception as e:
     print(f"An error occured: {e}")
 finally:
