@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+""" Prime game function """
+
+
 def isWinner(x, nums):
     """
     Determine the winner of each round and return the overall winner.
